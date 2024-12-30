@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" />
+</head>
+
+<body>
+    <h1>Login de Usuário</h1>
+    <form id="formLogin">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="password" id="senha" placeholder="Senha" required>
+        <button type="submit" id="botaoEntrar">Logar</button>
+    </form>
+    <div id="mensagem" class="mensagem"></div>
+
+    <script>
+const formLogin = document.getElementById('formLogin');
+
+formLogin.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const nome = document.getElementById('nome').value;
+    const senha = document.getElementById('senha').value;
+
+    fetch('http://localhost:3000/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nome, senha })
+    })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Credenciais inválidas');
+            }
+            return response.json();
+        })
+        .then(data => {
+            sessionStorage.setItem('usuario_id', data.id);
+            alert('Login bem-sucedido!');
+            window.location.href = 'tarefas.html'; 
+        })
+        .catch(error => {
+            console.error('Erro ao fazer login:', error);
+            alert('Erro ao fazer login. Verifique suas credenciais.');
+        });
+});
+
+    </script>
+</body>
+
+</html>
