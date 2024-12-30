@@ -17,7 +17,7 @@ O que Aprendi:
 Com este projeto, aprofundei meu entendimento sobre criação de APIs RESTful, integração com bancos de dados e integração entre o Front-End e o Back-end.
 Além disso, reforcei conhecimentos sobre manipulação de relacionamentos em bancos de dados e melhores práticas no desenvolvimento backend.
 
-===========================================================================================================================================================================================================================================================================================
+============================================================================================
 
 English (EN):
 User Registration and Login with Task Assignment via API
@@ -37,7 +37,7 @@ What I Learned:
 With this project, I deepened my understanding of creating RESTful APIs, integrating databases, and connecting the Front-End with the Back-End.
 Additionally, I reinforced my knowledge of handling relationships in databases and best practices in backend development.
 
-===========================================================================================================================================================================================================================================================================================
+============================================================================================
 
 Español (ES):
 Registro e Inicio de Sesión de Usuarios con Asignación de Tareas a través de API
